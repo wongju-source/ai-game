@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Farm Kill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🐷 Animal Farm Kill 🃏</h1>
+        <div id="game-status">Game Log: Ready to start!</div>
+    </header>
+
+    <div id="game-container">
+        <div id="players-container"></div>
+        
+        <div id="hand-container">
+            <h2>Your Hand (<span id="player-name"></span>)</h2>
+            <div id="current-hand">
+                </div>
+            <button id="end-turn-button" disabled>End Turn</button>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+    <script>
+        // Initialize the game with names
+        const game = new AnimalFarmKill(['Napoleon (P1)', 'Snowball (P2)', 'Boxer (P3)', 'Squealer (P4)']);
+        game.startGame();
+    </script>
+</body>
+</html>

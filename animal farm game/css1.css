@@ -1,0 +1,91 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#game-status {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+#players-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.player-board {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.player-board.current-turn {
+    border-color: #e74c3c; /* Red border for current player */
+    box-shadow: 0 0 10px #e74c3c;
+}
+
+.player-board.targetable {
+    cursor: pointer;
+    border-color: #2ecc71; /* Green border for valid target */
+}
+
+.player-board h3 {
+    margin-top: 0;
+}
+
+#hand-container {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#current-hand {
+    display: flex;
+    gap: 10px;
+    min-height: 120px; /* Ensure space for cards */
+}
+
+.card {
+    width: 80px;
+    height: 110px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.1s;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.Attack { background-color: #f39c12; }
+.card.Defense { background-color: #2ecc71; }
+.card.Health { background-color: #9b59b6; }
+.card.Special { background-color: #3498db; }
+
+.card-name {
+    font-weight: bold;
+}
